@@ -1,0 +1,2 @@
+Average MLX90640 Temperature: 34.5C (94.1F)
+Average MLX90640 Temperature: 33.9C (93.0F)

@@ -1,0 +1,10 @@
+=== Module Utilisation des informations sur les émotions
+
+==== Descriptions
+Nous avons effectué des recherches sur l’expression des paramètres que nous relevons (température corporelle, rythme cardiaque, voix) lorsque l’on se trouve dans chacune des émotions que nous avons choisi de reconnaître (joie, colère, tristesse, peur, dégoût et neutralité).
+
+==== Avancement
+La recherche nous a pris quelques heures mais nous avons trouvé tout ce que nous souhaitions et même plus, il serait possible de complexifier la détermination d’émotion en prenant en compte plus de particularités du sujet (zone de chaleur sur le corps par exemple).
+
+==== Bibliographie spécifique
+* [Ta température et tes émotions] : *Anne* _, 02/12/2015_, https://www.acupression.fr/ta-temperature-et-tes-emotions/

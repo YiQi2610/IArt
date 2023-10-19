@@ -1,0 +1,41 @@
+=== Modifications (PAN2+)
+
+==== Modifications de fond
+
+Tableau des modifications de fond apportées au projet avec validation
+des experts et encadrant informatique
+
+[cols=",,",options="header",]
+|====
+| libellé / date | Description brève | Validé par :
+| PAN 2             | L'affichage d'image par stéreoscopie  est remplacé par un écran pour ne pas compliquer la tache.               |Jean Le Feuvre
+| PAN 2             | L’entraînement de génération d'image n’est plus nécessaire, nous utilisons un modèle reseaux neurones déjà entraîné: Stable Diffusion mais nous l'hébergeons sur un serveur GPU de l’école. Une phrase est génerée avec notre algorithm et notre base de données à partir de données personelles de l'utilisateur.                | Jean Le Feuvre & Dana Diminescu
+| PAN 2             | Détection d'émotion de l'utilisateur avec son enregistrement audio. La détection se fait par un reseau neurone entrainé par nous-même.               | Jean Le Feuvre & Dana Diminescu
+| PAN 4            | La création d'une experience immersive avec le jeux de lumières, d'odeurs, de température et d'humidité sont enlevés, seulment le jeux de sons est gardé.                | Jean Le Feuvre & Dana Diminescu
+|====
+
+==== Modifications du rapport
+
+////
+Vous noterez dans cette section les modifications apportées au rapport
+depuis le PAN précédent. Si votre planification temporelle a été
+modifiée, vous laisserez l’ancienne planification dans cette annexe.
+////
+===== Modifications du rapport au PAN2
+
+- Au lieu d'entrainer notre propre réseau neurone pour la génération d'image, nous utilisons le modèle déjè existé, Stable Diffusion car il n'est pas possible d'entrainer un modèle sans avoir un dataset qui correspond à nos entrées-sorties du projet.
+- Nous créeons un prompt à partir de rythme cardiaque et emotion de l'utilisateur et donner ce prompt à Stable Diffusion pour génerer une image.
+- Le prompt constitue 5 mots : nom, style, artist, medium, couleur, avec l'algorithm que nous avons créé, il cherche les 4 premiers mots correspondant aux données.
+- L'utilisateur dit une phrase et nous detectons son emotion (SAD, HAPPINESS, DISGUST, NEUTRAL, ANGRY, FEAR) avec un réseau neurone entrainé par nous-même.
+- Nous n'utilisons plus de stéreoscopie pour afficher l'image généré mais nous l'affichons simplement sur un écran.
+
+===== Modifications du rapport au PAN3
+
+- La chaleur corporelle est detectée par le capteur de rythme cardiaque en même temps, nous utilisons pas de caméra thermique.
+- Dans le prompt généré, nous ajoutons trois mots correspondant à la température etalonnée de l'utilisateur. Ces trois mots décrivent simplement l'ambiance ou sentiment de l'utilisateur. Par exemple, si sa température est plus proche de 33 dégré, les mots "cold", "peaceful", "refreshing" seront ajoutés. Plus de mots de description dans le prompt signifie une génération d'image plus précise et qui correspond à nos attentes.
+- Afin d'avoir un prompt généré plus diversifié, nous avons utilisé "word2vec" qui génère un vecteur de mots qui a une significqtion très proche de mot donné. Dans notre cas, l'algorithm de génération de prompt trouve un nom (qui représente l'objet principal dans l'image) et nous utilisons ce mot pour generer une liste de mots qui lui ressemble le plus avec word2vec. Nous choisissons ensuite un parmi tous ces mots aléatoirement. Cette étape a été ajoutée pour éviter que l'image générée soit la même avec les données personnelles qui se ressemblent. 
+
+
+===== Modifications du rapport au PAN4
+
+- Le jeux de lumière, d'humidité et de température ont été enlevés car nous ne voyons pas trop d'importance. Une image et une musique sera suffisant.

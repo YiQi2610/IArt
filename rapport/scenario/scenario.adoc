@@ -1,0 +1,18 @@
+=== Scénarios d’usage
+
+
+Monsieur Martin rentre du travail un mercredi soir, fatigué et stressé par sa journée. Il a froid, possède des cernes, son cœur bat vite et est habillé tout en noir. Il est tard.
+
+En cliquant sur un simple bouton, et quelques secondes plus tard, l’expérience immersive commence. (Notre programme se charge de tout : capture des photos, détection du rythme cardiaque et de la voix.) Sur son ou ses écran(s) s’affiche une œuvre d’art unique. Il s’agit d’un coucher de soleil dans une mer calme. L’image est très colorée tout en restant douce tant dans l’intensité des couleurs que dans les traits de l’image. Les éclairages de la maison tournent à l’orange et au bleu dans une ambiance tamisée. Un doux son de vagues se fait percevoir. La maison se réchauffe, Monsieur Martin ressent même un petit vent doux. Il est apaisé, détendu et peut profiter de sa soirée.
+
+Le lendemain matin, Monsieur Martin sort de son lit. Il a chaud, son cœur bat lentement et il est souriant. Avant de commencer ses étirements et sa gym, il appuie à nouveau sur ce fameux bouton. Ni une ni deux, la maison s’illumine de couleurs riches, vives. Rouge, orange et vert s'entremêlent. Un œuvre d’art au traits rapides et aux couleurs vives se crée. Le style ressemble à du Picasso, on y reconnaît des animaux de tous types. La gaieté de la faune et de la flore donne une impression de vie fabuleuse. On entend des oiseaux chanter, des félins courir dans l’herbe. L’air de la pièce est frais et sent la rosée. Monsieur Martin se sent vivant, énergique, prêt pour sa journée.
+
+==== Nouveau scénario d’utilisation après PAN1:
+Venez découvrir une expérience unique qui mêle technologie et art pour vous plonger dans un univers sensoriel inédit !
+
+Dès votre entrée dans la salle, vous êtes invité à vous connecter à la machine en posant votre main sur un capteur. La machine commence alors à relever vos données corporelles : votre fréquence cardiaque, votre température corporelle, votre voix, etc. Vous êtes immergé dans une expérience qui vous transporte dans un monde émotionnel où la technologie et l'art se rejoignent pour créer une œuvre d'art unique et à votre image !
+Au fur et à mesure que vous interagissez avec la machine, celle-ci interprète vos émotions et une fois l’enregistrement terminé, celle-ci génère des images et des sons en réponse. Ces images créées sont de véritables représentations artistiques de vos émotions. Essayez d'interagir une seconde fois avec notre machine après avoir fait de l’exercice pour voir la différence !
+
+Venez découvrir cette machine fascinante, qui est capable de lire vos émotions et de les traduire en images et en sons d'une beauté surprenante. Plongez dans cet univers sensoriel inédit et laissez-vous surprendre par vos propres émotions.
+
+

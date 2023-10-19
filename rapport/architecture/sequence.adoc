@@ -1,0 +1,23 @@
+=== Diagramme de séquence (optionnel)
+
+Insérer ici un ou plusieurs diagrammes de séquence ou d’activité du
+projet. Voir le cours d’introduction au Génie Logiciel.
+Il peut y avoir plusieurs diagrammes, un par scénario. S’il y
+a dans le projet un dialogue client-serveur, il peut être utile de faire un
+diagramme de séquence spécifique pour ce dialogue.
+
+
+*Exemple utilisant plantuml*
+**(Vous pouvez, bien sûr, utiliser votre outil de dessin préféré).**
+
+[plantuml, sequence-x]
+....
+  browser  -> webserver :GET /index.html
+  browser <-- webserver
+  browser  -> webserver :POST /blog/comment
+              webserver  -> database:INSERT comment
+              webserver <-- database
+  browser <-- webserver
+....
+
+Voir la liste des outils supportés par http://asciidoctor.org/docs/asciidoctor-diagram/[asciidoctor-diagram].

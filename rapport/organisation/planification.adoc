@@ -1,0 +1,67 @@
+=== Planning Prévisionnel PACT
+////
+==== Rappel des dates
+Les dates importantes de PACT sont:
+
+* PAN1: 22/11/2022
+* PAN2: fin janvier 2023
+* PAN3: 04/04/2023
+* PAN4: 30/05/2023
+
+Les deux tableaux ci-dessous doivent vous aider à évaluer votre avancement/retard dans le développement de votre projet.
+Vous pouvez aussi vous aider de ces tableaux pour:
+
+* identifier les périodes de fortes charge de travail
+* analyser les dépendances entre modules
+* les retards bloquant pour l'avancée de l'ensemble du projet (ce n'est pas forcément le cas pour tous les modules)
+////
+==== Planning Groupe
+
+//Pour PAN1, remplissez dans ce tableau les dates prévues. Vous mettrez à jour les dates finales en cours d'année.
+
+[cols=",^,,",options="header",]
+|====
+|Tâche | Responsable(s) | Quand Prévisionnel | Quand effectif
+|Intégration Initale | Maël Mathevet |20/03/23| 24/03/23
+|Intégration PAN3 finalisée | Ker Chee Tung & Antoine Marchais |24/03/23| 03/04/23
+|Préparation / répétition PAN3 | Enguerrand Paquin |31/03/23| 4/04/23
+|Démo PAN4 finalisée | Tous les membres |11/05/23| 17/5/23
+|Préparation Poster PAN4 | Sacha Abitbol |18/05/23| 17/05/23
+|Présentation "Pitch" PAN4 | Tous les membres |26/05/23| 29/05/23
+|Vidéo PAN4 | Tous les membres |26/05/23| ...
+|====
+////
+Note:
+
+* l'intégration initiale correspond à l'étape où tous les modules communiquent ensemble même si les informations échangées sont fausses ou incomplètes. Pour rappel vous aurez trois journées complètes la semaine du 20/03 pour finaliser l'intégration
+* Le poster PAN4 devra être envoyé au plus tard le 18 mai 2023
+* Le support de présentation PAN4 devra être envoyé pour le 26/05/2023
+* La vidéo est une vidéo promotionnelle de 2 minutes maximum, et devra être envoyée pour le 26/05/2023
+
+Vous mettrez par ailleurs à jour l'annexe "avancement" avec les compte-rendus de vos réunions de groupe.
+////
+
+==== Planning Modules
+////
+Nous vous demandons de prévoir les dates des étapes de développement de vos modules.
+Pour PAN1, vous remplirez les dates prévues. Vous mettrez à jour les dates finales en cours d'année.
+
+* Travail Initial: bibliographie sur le module
+* Version initiale: le module tourne en mode isolé
+* Version intégrable: le module est prêt à être intégré, il manquera vraisemblablement des fonctionnalités. Cela correspond à une version "squelette" du projet.
+* Version intégrée: le module est complet et intégré
+////
+
+[cols=",^,^,,,",options="header",]
+|====
+|Module | Responsables | Travail Initial | Version initiale | Version intégrable | Version intégrée
+|Systèmes Embarqués | Maël Mathevet & Ernesto Cenusa (Expert : Tarik Graba ) | prévu: 27/01/23 fait: 26/01/23 | prévu: 3/03/23 fait: 10/03/23 | prévu: 24/03/23 fait:21/03/23 | prévu: 24/03/23 fait:03/04/23
+|Tests & Intégration | Ker Chee Tung & Antoine Marchais (Expert : Jean-Claude Dufourd) | prévu: 15/01/23 fait:20/01/23 | prévu: 31/01/23 fait:31/01/23 | prévu: 25/03/23 fait:28/03/23 | prévu: 30/4/23 fait:04/04/23
+|Reconnaissance d'image | Ker Chee Tung & Enguerrand Paquin (Expert : Stéphane Lathuilière )| prévu: 10/01/23 fait:15/01/23 | prévu: 31/01/23 fait:02/03/23 | prévu: 31/02/23 fait:21/03/23 | prévu: 24/3/23 fait:28/03/23
+|Traitement du signal audio | Sacha Abitbol &  Enguerrand Paquin (Expert : Antonin Gagneré)| prévu: 01/01/23 fait:15/01/23 | prévu: 31/01/23 fait:20/02/23 | prévu: 31/02/23 fait:16/03/23 | prévu: 24/3/23 fait:22/03/23
+|Utilisation des informations sur les émotions | Sacha Abitbol & Maël Mathevet (Expert : Jean-Claude Dufourd)| prévu: 27/01/23 fait:25/01/23 | prévu: 15/02/23 fait:11/02/23 | prévu: 10/03/23 fait:05/03/23 | prévu: 24/3/23 fait:05/03/23
+|====
+
+//Vous mettrez par ailleurs à jour les annexes de vos modules - cf le modèle d'annexe.
+
+

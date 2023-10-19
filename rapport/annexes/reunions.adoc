@@ -1,0 +1,60 @@
+=== Comptes Rendus de réunions
+
+//Insérez ici vos comptes rendus de réunions : date, durée, participants,
+//sujets abordés.
+
+==== Réunion du 27/09/2022
+
+* Présents:
+** Ker Chee Tung
+** Ernesto Cenusa
+** Expert : Enzo TARTAGLIONE
+* Durée ： 30 minutes
+* Sujet abordé : L'entrainement d'un modèle IA qui peut générer une image à partir des couleurs dominantes d'une personne. Ces couleurs dominantes sont déduites par le rythme cardiaque, le timbre de la voix, photo de la personne et la température. Cette image va être générée à partir d'une base de données de paysage.
+
+'''''
+1) Peut-on garantir l’unicité du résultat avec les mêmes entrées ?
+
+Oui, si le dataset est assez dense et si le bon modèle d’IA est utilisé on peut avoir unicité des l’image en sortie. Dans d’autres modèles d’IA plus poussés, utilisés par Dall-E par exemple, il est aussi possible de produire plusieurs images pour un jeu de données en entrée.
+
+2) Quel type d’IA faut-il utiliser pour ce projet ?
+
+Vous allez générer des images à partir d’autres images, l'auto encodeur paraît être le modèle le plus adapté pour ce genre de tâche. Lorsqu’il n’y a pas unicité en sortie, c’est un autoencoder variationnel.
+
+3) Quelles sont les principales difficultés que nous allons rencontrer ?
+
+Tout d’abord, l’entraînement du modèle va demander beaucoup de puissance de calcul mais Telecom possède des machines pour cela. Ensuite, trouver un dataset cohérent et assez dense est très important, c’est le cœur de votre projet, il faut qu’il soit propre ! Il faudra trouver une relation entre les caractéristiques de la personne et l’image générée. Finalement, pour constituer le dataset, il risque d’y avoir des questions de privacy. 
+
+4) Qu’est ce qu’une image synthétique ?
+
+C’est une image générée par ordinateur, vous allez avoir besoin de générer des images synthétiques pour étoffer votre dataset.
+
+'''''
+==== Réunion du 26/09/2022
+
+* Présents:
+** Enguerrand Paquin
+** Antoine Marchais
+** Expert : Renaud GABERT
+* Durée ： 30 minutes
+* Sujet abordé : Affichage d'un image généré sous la forme de 3D avec holographie ou stéreoscopie.
+
+'''''
+1) Est-il possible d’utiliser l’holographie pour afficher l’image générée par notre algorithme ?
+
+Je crains malheureusement que cela va être très complexe si ce n’est impossible. En effet la technique de l’holographie n’est qu’à ses balbutiements, il y a des contraintes physiques très forte concernant la définition des hologrammes affichés. Cependant si vous souhaitez conserver cette notion d’image 3D je peux vous conseiller la stéréoscopie.
+
+2) Qu’est-ce que la stéréoscopie ?
+
+C’est l’art de donner l’impression à l’utilisateur qu’il voit un objet en 3D alors que ce n’est pas le cas contrairement à l’holographie ou la projection est réellement en 3D. Il s’agit de tromper le cerveau humain pour lui faire croire qu’il a un objet 3D en face de lui.
+
+3) Connaissez vous des techniques de stéréoscopie ?
+
+Oui bien sûr, tout d’abord il y a la technique classique qui consiste à faire porter à l’utilisateur des lunettes avec un verre rouge et l’autre bleu et de superposer deux images de couleur bleu et rouge sur l’écran afin de donner l’impression de profondeur, c’est une technique qui fonctionne très bien et qui est peu onéreuse. Ensuite la technique utilisée dans les cinémas de nos jours consiste à utiliser des lunettes avec un verre polarisé verticalement et l’autre horizontalement et de superposer ainsi les deux images en les polarisant différemment.
+
+4) Est-il possible de rendre l’expérience encore plus immersive en utilisant une technique de stéréoscopie n’utilisant pas de lunette ?
+
+Oui, il existe une technique qui consiste à placer une grille très fine devant l’écran afin de cacher certains pixels a l’œil droit et d’autres à l’œil gauche. Cela permet ainsi de voir une image différente dans chaque œil et de recréer l’impression de 3D. Un professeur de Telecom est spécialisé dans ce domaine et il a déjà confectionné ce dispositif, contactez le (Yves Matthieu).
+
+'''''
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "css_user_interface.css">
+<title>Welcome to IArt</title>
+</head>
+<body  onload="loading()">
+
+<div id="title">
+    <h1>Generating Image...</h1>
+    <div class="loader" id="loader"></div>
+</div>
+
+<div id="image">
+    <h1> Image is generated!</h1>
+    <img src = "/rapport/images/generated_image.jpg" alt="image is generated" >
+</div>
+
+<script>
+    var myVar;
+    function loading(){
+        path = "/rapport/images/generated_image.jpg"
+        myVar = setTimeout(showImage, 3000);
+        //if(path.exist()){
+        //showImage();
+        //}
+    }
+
+    function showImage(){
+        document.getElementById("title").style.display = "none"
+        document.getElementById("image").style.display = "block"       
+    }
+</script>
+</body>
+</html>

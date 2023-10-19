@@ -1,0 +1,16 @@
+=== Module Reconnaissance d’image
+
+==== Descriptions
+Ce module s’occupe de la partie de transformation des données personnelles en une image artistique. Avec les données collectées grâce au module Systèmes Embarqués qui sont le rythme cardiaque, la température, le couleur dominant et l'émotion de l’utilisateur, un prompt compose d’un objet principal, un artist, un style et un médium est générée à l'aide de la base de donnée crée par nous-même et notre algorithme. Le prompt généré est donc utilisé pour la génération d’image avec Stable Diffusion. 
+
+==== Avancement
+La génération d'images avec les données personnelles fonctionne. Le prompt générée correspond bien aux caractéristiques de l'utilisateur. Afin de diversifier les images générées, nous avons utilisé “word2vec” pour obtenir un vecteur de mots qui ressemble à l'objet principale choisi avec notre algorithme. L’objet principal est donc choisi aléatoirement parmi tous ces mots de vecteur. Cette modification est pour éviter la répétition de prompt et image générée avec les données personnelles qui se ressemblent. 
+
+Nous avons également ajouté trois mots de description dans le prompt qui correspond à la température étalonnée de l’utilisateur. Ces trois mots décrivent l’ambiance ou le sentiment de l’utilisateur. Plus de mots qu’on donne au Stable Diffusion, plus précise l’image générée.
+
+La version de Stable Diffusion que nous utilisons a été changée à la version 2 car la version 2.1 que nous utilisions n’a pas fonctionné avec les problèmes de mise à jour de API. 
+
+==== Bibliographie spécifique
+* [The Illustrated Word2vec] : *Jay Alammar* _, 27/03/2019_, https://jalammar.github.io/illustrated-word2vec/
+
+* [Stable Diffusion 2.1 Demo] : *StabilityAI* , https://huggingface.co/spaces/stabilityai/stable-diffusion

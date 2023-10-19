@@ -1,0 +1,10 @@
+=== Module Audio
+
+==== Descriptions
+Ce module s’occupe de détecter l’émotion de l’utilisateur à partir de sa voix. Un algorithme traite un fichier audio généré par le module système embarqué et classe l’audio parmi 6 catégories émotionnelles : joie, colère, tristesse, peur, dégoût, neutre.
+
+==== Avancement
+Les résultats sont très satisfaisants. Nous avons implémenter une méthode d’apprentissage profond utilisant des réseaux de neurones convolutifs. Une base de données de plus de 5000 sons annotés pour entraîner notre modèle. Après une phase de test, notre algorithme atteint les 55% de précision de détection d’émotion. C’est une réussite, nous avons atteint notre objectif pour ce module.
+
+==== Bibliographie spécifique
+* [Training a classifier] : *Pytorch* , https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html

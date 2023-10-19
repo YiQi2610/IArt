@@ -1,0 +1,37 @@
+=== Plans de test (PAN2+)
+////
+Vous allez travailler sur chaque bloc de votre projet, et qu’il soit
+informatique, électronique ou matériel, vous allez devoir faire du
+test :
+
+* tester que le bloc que vous venez de finir fait ce qu’il faut ;
+* tester que le bloc fonctionne avec les blocs en amont ou en aval dans
+l’architecture ;
+* tester que les performances sont acceptables…
+* et plus globalement, tester que le projet « marche ».
+
+Vous allez devoir faire ce travail sur le prototype allégé, puis sur le
+prototype final. C’est un travail dans le module « intégration et
+tests ».
+
+Cette section rassemble les plans de test du proto allégé et du proto
+final. C’est une liste des tests à effectuer, sous la forme, pour chaque
+test :
+
+* situation/contexte
+* action ou entrée à appliquer
+* réaction ou sortie attendue.
+////
+
+[cols=",^,,",options="header",]
+|====
+|Contexte | Action à appliquer | Sortie attendue | Resultat
+|Génération d'image avec les données personnels fournies manuellement (sans intégration avec le module Système Embarqués)| Dans le code, on donne le couleur dominant, le rythme cardiaque et l'émotion en entrée, le code doit créer un prompt et générer une image d'après ces données fournies. | L'image générée correspond aux entrées fournies et le prompt généré doit être propre. | Nous avons bien généré l'image avec un temps de génération autour 1 min 30s. Le prompt a bien pris en compte les entrées. L'objet principal d'image généré est diversifié à chaque génération d'image avec les même entrées. C'est grâce à word2vec qui nous permet de choisir aléatoirement l'objet prinicipal dans l'image correspondant à nos entrées. Résultat est assez satisfaisant.
+|Détéction d'émotion de l'utilisateur | En parlant une phrase durant 5 seconds à un micro avec une émotion contente, nous avons recupéré un fichier audio .wav avec raspberry pi qui contient cet audio. Nous avons utilisé ce fichier pour tester la détéction d'émotion avec le réseau neurone entrainé par nous-même. | L'émotion "HAPPY" doit être detectée. | Nous avons réussi à detecter l'émotion "HAPPY" de l'utilisateur. Nous avons ensuite testé plusieurs fois, la plupart des fois nous avons réussi à bien détecter l'émotion mais quelque fois d'échec. Le resultat est assez satisfaisant.
+|Détéction de rythme cardique et la température | En placant notre doigt sur le capteur, notre température et rythme cardiaque sont relevés via Raspberry pi avec notre code Python. | La température et le rythme cardique detectés doit correspond bien à l'utilisateur. | Pour la température, nous n'avions aucun problème à la détecter. Pour le rythme cardiaque, au début le résultat était un peu étrange mais après plusieurs essais, nous avons eu également les résultats satisfaisants.
+|Prise de photo de l'utilisateur avec un caméra | Nous sommes placés devant la caméra connecté à Raspberry pi et la prise de photo est faite avec le code Python. | La photo prise est claire et un fichier jpg est généré. | Il n'y a pas de problème pour la photo prise avec le caméra.
+|L'envoie des fichiers entre Raspberry pi et le serveur GPU avec socket | Le raspberry pi envoie 4 fichiers quand le procédure est lancé : deux fichiers txt pour la température et le rythme cardiaque, un fichier jpg pour la photo et un fichier wav pour audio. Le socket client met ces 4 fichiers dans un dossier zip et il envoie ce dossier zip au serveur GPU via socket. Le serveur recoit ce dossier, le dezip, recupère ces 4 fichiers et les traite pour détecter l'émotion, créer le prompt et enfin générer l'image. Le serveur envoie l'image généré au client (Raspberry pi) avec un scp fait du coté client après avoir reçu un message OK du serveur. Nous avons testé cette connexion socket en lancant le socket serveur et le socket client avec les 4 fichiers donnés manuellement (sans recupération de données direct de l'utilisateur). | Le client peut se connecter au serveur et lui envoyer le dossier zip contenant les 4 fichiers. Le serveur peut les récupérer, générer une image et envoie cet image au client. |  Au début, nous avons rencontré des difficultés pour que le Raspberry pi soit sur le réseau Campus Télécom et qu'il puisse se connecte au serveur GPU. Nous sommes bloqués à cette étape pendant 4 jours. A la fin, la connexion entre Raspberry pi et serveur GPU est achevé avec l'aide de notre tuteur M. Marc Jean Mougin. Le premier problème est résolu mais nous avons ensuite rencontré le deuxième problème. L'envoie des fichiers entre Raspberry pi et serveur n'a pas réussi au premier essai. Le dossier zip a été bien envoyé mais il était vide. Nous avons du débugger et cela vient du problème du nom de fichier qui indique le chemin. Aprés la piscine au PAN 3, nous avons réussi à envoyer des fichiers de Raspberry Pi au serveur GPU avec les socket, le serveur GPU a également réussi de traiter les fichiers et générer une image. Le raspberry pi a recupéré l'image avec scp. Nous avons bien réussi cette étape essentiel : Connexion entre Raspberry pi et serveur GPU pour la génération d'image.
+|L'intégration compléte entre le module Système Embarqué et la génération d'image | Le socket serveur et le code principal de Raspberry pie se lance. L'utilisateur se met devant la caméra, met son doigt sur le capteur, parle avec un micro. | Le raspberry pi collecte toutes ses données et les envoyer vers le serveur GPU. Le serveur fait les traitement, crée une image et Raspberry pi recupère cet image et l'afficher sur un écran. | Quand le code principale est lancé, il faut que nous informons l'utilisateur de parler à micro au bon moment car le micro ne se lance que pendant un certain moment. La procédure de collecte de données à réception d'image générée est achevé mais nous n'avon pas réussi à l'afficher sur l'écran. Nous avons du trouver des solutions pour utiliser les commandes systèmes qui conviennent. Enfin, cette intégration est également accompli pendant PAN 3.
+|L'ajout de musique pour la création d'experience immersive | Une musique est choisie d'après le couleur dominant de l'utilisateur. Le raspberry pie récupère le nom du fichier de musique choisi et le met sur enceinte. | Quand l'image est affiché sur l'écran, l'utilisateur entend la musique en même temps. | Les fichier musique sont de format .mp3 au début mais la commande système ne marche pas sur Raspberry pi avec ce format. Nous avons du convertir toutes les fichiers musiques au format .wav et nous avons pu entendre la musique sur l'enceinte.
+
+|====

@@ -1,0 +1,9 @@
+=== Module Systèmes Embarqués
+
+==== Descriptions
+Nous nous occupons de la partie visible du projet. Nous devons faire fonctionner la carte raspberry pi, vitale pour le bon fonctionnement du projet. En parallèle, il faut pouvoir capter et émettre des données, avec des capteurs directement branchés sur cette raspberry pi.
+
+==== Avancement
+Tous les capteurs fonctionnent, leur fonctionnement est d’ailleurs automatisé grâce à Cron qui lance une captation de données (conditionnée au fait qu’une personne soit détectée devant l’installation) toutes les 10 secondes. Les données prélevées sont ensuite enregistrées dans divers fichiers placés dans un répertoire puis utilisés par les autres modules.
+
+//==== Bibliographie spécifique
