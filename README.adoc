@@ -1,0 +1,135 @@
+= Rapport d’avancement: groupe “2.2”
+ifdef::env-gitlab,env-browser[:outfilesuffix: .adoc]
+:doctype: book
+:stem: latexmath
+:source-highlighter: coderay
+:toc-title: Table des matières
+:toc: macro
+:sectnums:
+:imagesdir: images
+
+
+// Partie non numérotée
+:sectnums!:
+== « IArt »
+
+=== Membres du groupe
+
+* Sacha Abitbol
+* Antoine Marchais
+* Maël Mathevet
+* Enguerrand Paquin
+* Ker Chee Tung
+
+=== Tuteur
+
+* Marc Jeanmougin
+
+=== Encadrant génie logiciel
+
+* Jean-Claude Dufourd
+
+<<<
+
+== Résumé du sujet choisi en français (PAN1)
+
+Notre projet est un projet d'art numérique immersif. À partir de données personnelles tel que le rythme cardiaque, le timbre de la voix, (peut-être aussi la chaleur corporelle) mais également une photo de la personne, le tout à un instant précis, un algorithme générera une œuvre d'art numérique immersive et évolutive.
+
+Nous utiliserons des capteurs cardiaques, micros et caméras pour la collecte des données nécessaires. Il s’agira ensuite d’utiliser des analyses spectrales et des algorithmes de traitement d’image pour générer des informations qui serviront d’entrées pour l'algorithme.
+    
+L'œuvre consistera en l’affichage par stéréoscopie d’une image de paysage qui soit en adéquation avec l’humeur de l’utilisateur. L’immersion sera assurée par des jeux de sons et de lumières, et éventuellement des odeurs et un changement de température et d’humidité.
+
+
+== English Summary (PAN1)
+
+Our project is an immersive digital art project. From personal data, such as heart rate, voice tone, (maybe body temperature) and a user's photo, an algorithm will generate a digital, immersive and evolutive artwork.
+
+In order to gather all the data we need, we will be using heart beat sensors, microphones and cameras. Then, we will use spectrum analyses and image processing algorithms to generate information that will be used as input for the algorithme.
+
+The artwork will consist of a landscape picture displayed using stereoscopy that matches with the user’s mood. Besides, an immersive experience will be created with the help of sound and light effects and eventually odors, temperature and humidity changes.
+
+    
+////
+*Notes concenant le rapport*
+
+Les différentes pages du document sont rédigées en utilisant le langage
+AsciiDoc. Le squelette de rapport contient des exemples avec entre autres:
+
+* des images,
+* des liens,
+* des équations.
+
+La structure du rapport (parties, sections et la relation avec les
+différents fichiers) se trouve dans le fichier courant.
+
+**Prenez le temps** de supprimer le texte de remplissage et les sections non
+utilisées pour l'instant. Vous pouvez par exemple commenter ces parties non
+utilisées pour qu'elles n'apparaissent pas dans le document final. En Asciidoc,
+il suffit de les précéder de deux slashs (`//`).
+
+////
+
+<<<
+toc::[]
+<<<
+
+// On numérote le reste des sections
+:sectnums:
+
+== Étude d’antériorité et justification de la proposition (PAN1)
+
+include::proposition/proposition.adoc[Description de la proposition]
+
+include::proposition/etat-de-l-art.adoc[Description de l’état de l’art]
+
+<<<
+
+== Scénarios d’usage (PAN1)
+
+include::scenario/scenario.adoc[Scénarios d’usage]
+
+<<<
+
+== Architecture du projet (PAN1)
+
+include::architecture/schema.adoc[Schéma d’architecture]
+
+include::architecture/interfaces.adoc[Description des interfaces]
+
+//include::architecture/sequence.adoc[Diagramme de séquence]
+
+//include::architecture/ihm.adoc[Interface utilisateur graphique]
+
+<<<
+
+== Organisation du projet (PAN1)
+
+include::organisation/planification.adoc[Diagramme de planification temporel des tâches]
+
+include::organisation/plan-tests.adoc[Plans de test (PAN2+)]
+
+<<<
+
+[bibliography]
+== Bibliographie (PAN1+)
+
+include::References.adoc[Bibliographie]
+
+<<<
+
+== Annexes
+
+include::annexes/modifications.adoc[Modifications (PAN2+)]
+
+//include::annexes/avancement.adoc[Avancement des modules]
+
+include::annexes/moduleSystemesEmbarques.adoc[Avancement module Systèmes Embarqués]
+
+include::annexes/moduleReconnaissanceimage.adoc[Avancement module Reconnaissance d'image]
+
+include::annexes/moduleEmotion.adoc[Avancement module Utilisation des informations sur les émotions]
+
+include::annexes/moduleAudio.adoc[Avancement module Audio]
+
+
+include::annexes/reunions.adoc[Compte rendu des réunions]
